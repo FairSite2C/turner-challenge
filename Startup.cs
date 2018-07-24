@@ -33,7 +33,9 @@ namespace turner_challenge
             {
                 app.UseDeveloperExceptionPage();
             }
-
+ 
+            app.UseDefaultFiles();
+            app.UseStaticFiles(); // For the wwwroot folder
             app.UseMvc();
         }
     }
