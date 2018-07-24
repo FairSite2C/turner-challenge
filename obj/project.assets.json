@@ -13040,11 +13040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\TestProjects\\Turner\\turner-challenge\\turner-challenge.csproj",
+      "projectUniqueName": "D:\\TestProjects\\Turner\\turner-challenge\\turner-challenge.csproj",
       "projectName": "turner-challenge",
-      "projectPath": "d:\\TestProjects\\Turner\\turner-challenge\\turner-challenge.csproj",
+      "projectPath": "D:\\TestProjects\\Turner\\turner-challenge\\turner-challenge.csproj",
       "packagesPath": "C:\\Users\\Otto\\.nuget\\packages\\",
-      "outputPath": "d:\\TestProjects\\Turner\\turner-challenge\\obj\\",
+      "outputPath": "D:\\TestProjects\\Turner\\turner-challenge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

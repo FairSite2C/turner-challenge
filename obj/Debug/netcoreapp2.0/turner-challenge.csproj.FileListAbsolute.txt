@@ -8,3 +8,5 @@ D:\TestProjects\Turner\turner-challenge\bin\Debug\netcoreapp2.0\turner-challenge
 D:\TestProjects\Turner\turner-challenge\bin\Debug\netcoreapp2.0\turner-challenge.pdb
 D:\TestProjects\Turner\turner-challenge\obj\Debug\netcoreapp2.0\turner-challenge.dll
 D:\TestProjects\Turner\turner-challenge\obj\Debug\netcoreapp2.0\turner-challenge.pdb
+D:\TestProjects\Turner\turner-challenge\bin\Debug\netcoreapp2.0\Microsoft.Azure.Documents.ServiceInterop.dll
+D:\TestProjects\Turner\turner-challenge\bin\Debug\netcoreapp2.0\DocumentDB.Spatial.Sql.dll

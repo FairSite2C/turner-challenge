@@ -9,13 +9,27 @@
   <meta name="author" content="Neal Lowrey, 404-514-3669">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
   <script src="scripts/turner.js"></script>
   <link rel=="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
 <div id="content">
-WOW    
+  <div id="titles">
+    <input type="text"  data-bind="textinput:searchVal">   
+    <input type="button" id="testDetail" value="TEST DETAIL">
+    <div id="titlesList" >
+      <ul data-bind="foreach:titles">
+          <li data-bind="text: $data, 'click': function(){$parent.selectTitle($index);}">
+          </li>
+      </ul>
+
+    </div>
+    <div id="titleDetail">
+
+    </div>
+  </div>
 </div>
 </body>
 </html>
