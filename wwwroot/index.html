@@ -12,24 +12,48 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
   <script src="scripts/turner.js"></script>
   <link rel=="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    #titles,#titleList,#titleDetails{
+      float:left;
+    }
+  </style>
+
 </head>
 
 <body>
-<div id="content">
-  <div id="titles">
-    <input type="text"  data-bind="textinput:searchVal">   
-    <input type="button" id="testDetail" value="TEST DETAIL">
-    <div id="titlesList" >
-      <ul data-bind="foreach:titles">
-          <li data-bind="text: $data, 'click': function(){$parent.selectTitle($index);}">
-          </li>
-      </ul>
+  <div id="content">
+    
+    <div id="titles" style="width:100%">
 
-    </div>
-    <div id="titleDetail">
+      <div id="titleList" style="width:30%">
+        <h5>Input part of the movie title to search</h5>
+        <h5>(Whisper aside, try the, man, ann)</h5>
+        <input type="text"  data-bind="textinput:searchVal">
+        
+        <div data-bind="visible:titles().length > 0">  
+          <h5>Click on title to see movie details</h5>
+          <ul data-bind="foreach:titles">
+            <li data-bind="text: $data, 'click': function(){$parent.selectTitle($index());}"></li>
+          </ul>
+        </div> 
+      </div>
+
+      <div id="titleDetails" style="width:60%">
+          <h3>Title</h3>
+          <label data-bind="text:title"></label>
+          <h3>Year</h3>
+          <label data-bind="text:year"></label>
+          <h3>Genres</h3>
+          <label data-bind="text:genres"></label>
+          <h3>Stars</h3>
+          <label data-bind="text:stars"></label>
+          <h3>Awards Won</h3>
+          <label data-bind="text:wins"></label>
+          <h3>Description</h3>
+          <textarea data-bind="text:description" style="width:100%;height:200px;margin:3px"></textarea>
+      </div>
 
     </div>
   </div>
-</div>
 </body>
 </html>

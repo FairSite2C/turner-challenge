@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.KeyVault;
 using System.Configuration;
 using MongoDB.Bson;
+using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
 using MongoDB.Driver;
 using MongoDB.Driver.Linq;
+using Newtonsoft.Json;
 
 namespace turner_challenge.Controllers
 {
@@ -64,7 +66,7 @@ namespace turner_challenge.Controllers
 
         [HttpGet]
         [Route("api/titles/getDetail")]
-        public async Task<BsonDocument> GetDetail(string title)
+        public async Task<string> GetDetail(string title)
         {
             string collectionName = "Titles";
 
@@ -96,8 +98,10 @@ namespace turner_challenge.Controllers
             {
                 string msg = ex.Message;
             }
-
-            return retVal;
+   
+            var jsonWriterSettings = new JsonWriterSettings { OutputMode = JsonOutputMode.JavaScript }; // key part
+            
+            return retVal.ToJson(jsonWriterSettings);
         }
 
         private IMongoDatabase getDatabase(){
